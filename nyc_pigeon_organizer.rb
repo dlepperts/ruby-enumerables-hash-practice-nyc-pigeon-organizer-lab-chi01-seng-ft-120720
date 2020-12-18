@@ -19,6 +19,7 @@ pigeon_data = {
     
 def nyc_pigeon_organizer(data)
   final_results = data.each_with_object({}) do |(key,value), final_array|
+    p value
     value.each do |inner_key, names|
       names.each do |name|
         if !final_array[name]
@@ -32,3 +33,5 @@ def nyc_pigeon_organizer(data)
     end
   end
 end
+
+nyc_pigeon_organizer(pigeon_data)
